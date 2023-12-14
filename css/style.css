@@ -1,0 +1,105 @@
+button {
+    --b: 3px;   /* border thickness */
+    --s: .15em; /* size of the corner */
+    --c: #BD5532;
+    
+    padding: calc(.05em + var(--s)) calc(.3em + var(--s));
+    color: var(--c);
+    --_p: var(--s);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--c) 0)
+      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .2em;
+  }
+  button:hover,
+  button:focus-visible{
+    --_p: 0px;
+    outline-color: var(--c);
+    outline-offset: .05em;
+  }
+  button:active {
+    background: var(--c);
+    color: #fff;
+  }
+  
+  body {
+    height: 100vh;
+   background-image:url('../images/img2.jpg');
+   background-position: center center;
+   background-size: cover;
+  }
+  button {
+    font-family: 'Delius Swash Caps', cursive;
+    font-size: 1.25rem;
+    cursor: pointer;
+    border: none;
+    margin: .1em;
+    padding: 1.25rem ;
+  }
+
+
+div {
+    text-align: center;
+}
+
+h1 {
+    font-size: 5rem;
+    font-family: 'Delius Swash Caps', cursive;
+    margin-top: 1.875rem;
+    margin-bottom: 1.25rem;
+}    
+.container p{
+    font-family: 'Delius Swash Caps', cursive;
+    font-size: 1.25rem;
+
+
+}
+
+
+
+.quote-text p{
+    font-size: 2.1875rem ;
+    font-family: 'Indie Flower', cursive;
+
+}
+
+i{
+
+    font-size: 2.5rem ;
+    color: black;
+}
+
+@media only screen and (max-width: 600px){
+  .quote-text p{
+    font-size: 1.1875rem ;
+  } 
+i{
+    font-size:30px ;
+    
+}
+.container p{
+  font-size: 16px;
+}
+h1 {
+  font-size: 40px;
+  
+}   
+}
+@media only screen and (max-width: 425px){
+.quote-text p{
+    font-size:  16px; 
+  } 
+  i{
+    font-size:20px;
+    
+}
+.container p{
+  font-size: 16px;
+}
+h1 {
+  font-size: 30px;
+  
+}    
+}
